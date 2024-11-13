@@ -1,6 +1,4 @@
-using BlazorStripe.Client.Pages;
 using BlazorStripe.Components;
-using Stripe;
 
 namespace BlazorStripe
 {

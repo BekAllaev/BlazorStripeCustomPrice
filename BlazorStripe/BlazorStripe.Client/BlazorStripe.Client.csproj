@@ -13,4 +13,8 @@
     <PackageReference Include="Stripe.net" Version="47.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\StripeModule.Frontend\StripeModule.Frontend.csproj" />
+  </ItemGroup>
+
 </Project>

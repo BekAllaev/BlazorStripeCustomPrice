@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\StripeModule.Frontend\StripeModule.Frontend.csproj" />
     <ProjectReference Include="..\BlazorStripe.Client\BlazorStripe.Client.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.8" />
   </ItemGroup>
