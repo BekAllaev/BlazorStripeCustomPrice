@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorStripe", "BlazorStripe\BlazorStripe\BlazorStripe.csproj", "{CC5BEE78-0F65-41A7-892A-69BC8660EF54}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorStripe.Client", "BlazorStripe\BlazorStripe.Client\BlazorStripe.Client.csproj", "{E56D0930-5931-48A6-8E97-3ACB0907D3B0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StripeModule.Frontend", "StripeModule.Frontend\StripeModule.Frontend.csproj", "{53FE9B3A-5F46-4C41-8F4A-F25EE7DB639E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StripeModule.Backend", "StripeModule.Backend\StripeModule.Backend.csproj", "{FE61ACC7-39DB-4D7A-A570-048568EC240A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorStripe.Backend", "BlazorStripe.Backend\BlazorStripe.Backend.csproj", "{4DA8A9C4-853A-4EE1-990A-8B9F5362FBE3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC5BEE78-0F65-41A7-892A-69BC8660EF54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC5BEE78-0F65-41A7-892A-69BC8660EF54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC5BEE78-0F65-41A7-892A-69BC8660EF54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC5BEE78-0F65-41A7-892A-69BC8660EF54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E56D0930-5931-48A6-8E97-3ACB0907D3B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E56D0930-5931-48A6-8E97-3ACB0907D3B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E56D0930-5931-48A6-8E97-3ACB0907D3B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E56D0930-5931-48A6-8E97-3ACB0907D3B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53FE9B3A-5F46-4C41-8F4A-F25EE7DB639E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53FE9B3A-5F46-4C41-8F4A-F25EE7DB639E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53FE9B3A-5F46-4C41-8F4A-F25EE7DB639E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53FE9B3A-5F46-4C41-8F4A-F25EE7DB639E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE61ACC7-39DB-4D7A-A570-048568EC240A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE61ACC7-39DB-4D7A-A570-048568EC240A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE61ACC7-39DB-4D7A-A570-048568EC240A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE61ACC7-39DB-4D7A-A570-048568EC240A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DA8A9C4-853A-4EE1-990A-8B9F5362FBE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DA8A9C4-853A-4EE1-990A-8B9F5362FBE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DA8A9C4-853A-4EE1-990A-8B9F5362FBE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DA8A9C4-853A-4EE1-990A-8B9F5362FBE3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F6BBD9F3-37ED-408D-A5D7-6D9D6F0AD93E}
+	EndGlobalSection
+EndGlobal
