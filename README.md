@@ -1,8 +1,12 @@
 # BlazorStripe
 
-## Idea of the project
+## Description
 In this project my idea is to send request to Stripe with the price and product name. I expect that this price and product name will be on the checkout page.   
 In any case Stripe returns user to the form in my project whether it successfull or not successfull payment.
+
+This repo is based on this article - https://jonhilton.net/blazor-stripe/.  
+In this repo we use webhooks, here is the article about webhook principles - https://hookdeck.com/webhooks/guides/what-are-webhooks-how-they-work#:~:text=A%20webhook%20is%20an%20HTTP,fired%20in%20the%20source%20system.  
+This is webhook implementation in ASP .NET Core - https://learn.microsoft.com/en-us/aspnet/webhooks/
 
 ## Project structure
 

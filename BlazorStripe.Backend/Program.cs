@@ -7,7 +7,7 @@ namespace BlazorStripe.Backend
     {
         public static void Main(string[] args)
         {
-            StripeConfiguration.ApiKey = "sk_test_51MxBRxG2lcqXWYi2eX0voNB0IGhGEddskZfSIaWjge8xDbE0sz2ysL2db6jysNg05d2PvERB5M1GICcZ4ePxOppm00bQ4ngcEP";
+            StripeConfiguration.ApiKey = Environment.GetEnvironmentVariable("STRIPE_SECRET_KEY");
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
@@ -16,6 +16,16 @@ namespace BlazorStripe.Backend
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowBlazorClient", policy =>
+                {
+                    policy.AllowAnyOrigin() // Replace with your Blazor client's URL
+                          .AllowAnyHeader()
+                          .AllowAnyMethod();
+                });
+            });
 
             var app = builder.Build();
 
@@ -26,11 +36,9 @@ namespace BlazorStripe.Backend
                 app.UseSwaggerUI();
             }
 
+            app.UseCors("AllowBlazorClient");
             app.UseHttpsRedirection();
-
             app.UseAuthorization();
-
-
             app.MapControllers();
 
             app.Run();

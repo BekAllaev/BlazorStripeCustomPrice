@@ -1,4 +1,5 @@
 using BlazorStripe.Components;
+using Stripe;
 
 namespace BlazorStripe
 {
@@ -12,6 +13,11 @@ namespace BlazorStripe
             builder.Services.AddRazorComponents()
                 .AddInteractiveServerComponents()
                 .AddInteractiveWebAssemblyComponents();
+
+            builder.Services.AddScoped(sp => new HttpClient
+            {
+                BaseAddress = new Uri(builder.Configuration["BackendURL"])
+            });
 
             var app = builder.Build();
 

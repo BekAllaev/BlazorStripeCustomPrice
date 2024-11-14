@@ -1,6 +1,8 @@
 ﻿@page "/"
 @using Stripe.Checkout
+@using System.Web
 @inject NavigationManager NavMan
+@inject HttpClient HttpClient
 @rendermode InteractiveWebAssembly
 
 <PageTitle>Widget Sale!</PageTitle>
@@ -26,31 +28,12 @@
 
     private async Task Checkout()
     {
-        var domain = "https://localhost:7095";
-        var options = new SessionCreateOptions
-            {
-                LineItems = new List<SessionLineItemOptions>
-            {
-                new()
-                {
-                    PriceData = new()
-                    {
-                        UnitAmount = Convert.ToInt16(Price) * 100, // цена в центах (например, £49 = 4900)
-                        Currency = "usd",
-                        ProductData = new()
-                        {
-                            Name = $"Order#{OrderId??"111"}",
-                        }
-                    },
-                    Quantity = 1,
-                },
-            },
-                Mode = "payment",
-                SuccessUrl = domain + "/OrderComplete",
-                CancelUrl = domain + "/OrderAbandoned"
-            };
-        var service = new SessionService();
-        var session = await service.CreateAsync(options);
-        NavMan.NavigateTo(session.Url);
+        var queryBuilder = HttpUtility.ParseQueryString(string.Empty);
+        queryBuilder["price"] = Price.ToString();
+        queryBuilder["orderId"] = OrderId.ToString();
+        queryBuilder["domain"] = NavMan.Uri.TrimEnd('/');
+
+        var checkoutSessionUrl = await HttpClient.GetStringAsync($"api/Stripe?{queryBuilder}");
+        NavMan.NavigateTo(checkoutSessionUrl);
     }
 }

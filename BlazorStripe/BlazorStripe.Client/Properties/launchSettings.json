@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "BlazorStripe.Client": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "STRIPE_SECRET_KEY": "sk_test_51MxBRxG2lcqXWYi2eX0voNB0IGhGEddskZfSIaWjge8xDbE0sz2ysL2db6jysNg05d2PvERB5M1GICcZ4ePxOppm00bQ4ngcEP"
+      }
+    }
+  }
+}
