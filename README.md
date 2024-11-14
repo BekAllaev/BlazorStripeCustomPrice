@@ -8,6 +8,8 @@ This repo is based on this article - https://jonhilton.net/blazor-stripe/.
 In this repo we use webhooks, here is the article about webhook principles - https://hookdeck.com/webhooks/guides/what-are-webhooks-how-they-work#:~:text=A%20webhook%20is%20an%20HTTP,fired%20in%20the%20source%20system.  
 This is webhook implementation in ASP .NET Core - https://learn.microsoft.com/en-us/aspnet/webhooks/
 
+> There is no need to configure price or the product on the Stripe
+
 ## Project structure
 
 This is Blazor Web App(auto render mode)
@@ -21,4 +23,4 @@ Blazor projects:
 - `BlazorStripe.Client` - Blazor client part. Contains core logic. You will find code on `Home.razor`. You should consume `StripeModule.Frontend` in this project
 
 Backend:
-- `BlazorStripe.Backend` - this is absolutly empty project, generated from template, you won't find anything interesting here. Treat it as stub. This project demonstrate how you can consume  `StripeModule.Backend`
+- `BlazorStripe.Backend` - In this project we generate link to the checkout link, also here we consume `StripeModule.Backend`
