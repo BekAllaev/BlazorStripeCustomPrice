@@ -10,6 +10,11 @@ This is webhook implementation in ASP .NET Core - https://learn.microsoft.com/en
 
 > There is no need to configure price or the product on the Stripe
 
+## Read this before you run project
+
+This solution has two executable projects. First one is `BlazorStripe`, this is Blazor project, second one is `BlazorStripe.Backend`
+In this solution stripe secret key is read form system enviromental variabels. Don't forget to set environment variable!
+
 ## Project structure
 
 This is Blazor Web App(auto render mode)
